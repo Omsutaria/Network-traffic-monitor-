@@ -1,0 +1,80 @@
+============================================================
+  NETWORK TRAFFIC ANOMALY REPORT
+  Author    : Om M. Sutaria
+  GitHub    : github.com/OmSutaria/network-traffic-monitor
+============================================================
+  Source    : Built-in Demo Traffic (simulated)
+  Generated : 2026-02-21 16:59:43
+------------------------------------------------------------
+  SUMMARY
+  Total Connections : 342
+  Unique Source IPs : 11
+  Total Data        : 535,946 bytes
+  Anomalies Found   : 12
+
+------------------------------------------------------------
+  ANOMALY DETAILS
+
+  [1] PORT SCAN  —  Severity: HIGH
+       Source IP      : 192.168.1.105
+       Detail         : 15 unique ports probed: [21, 22, 23, 25, 80, 110, 135, 139, 143, 443]...
+       Recommendation : Investigate source IP. Block at firewall if unauthorised. Review IDS rules.
+
+  [2] BRUTE FORCE ATTEMPT  —  Severity: CRITICAL
+       Source IP      : 10.0.0.88
+       Detail         : 25 failed connection attempts detected
+       Recommendation : Block IP immediately. Enable account lockout policy. Review auth logs.
+
+  [3] HIGH FREQUENCY TRAFFIC  —  Severity: MEDIUM
+       Source IP      : 172.16.0.99
+       Detail         : 120 total connections from this IP
+       Recommendation : Investigate for DoS/DDoS or misconfigured client. Consider rate limiting.
+
+  [4] SUSPICIOUS PORT ACTIVITY  —  Severity: CRITICAL
+       Source IP      : 203.0.113.99
+       Detail         : Connection to port 4444 — known backdoor/C2 port
+       Recommendation : Isolate affected host immediately. Check for malware/RAT. Escalate to IR team.
+
+  [5] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 21 (FTP (unencrypted)) accessible from 192.168.1.105
+       Recommendation : Restrict FTP (unencrypted) access via firewall. Use VPN if remote access required.
+
+  [6] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 23 (Telnet (unencrypted)) accessible from 192.168.1.105
+       Recommendation : Restrict Telnet (unencrypted) access via firewall. Use VPN if remote access required.
+
+  [7] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 445 (SMB (EternalBlue)) accessible from 192.168.1.105
+       Recommendation : Restrict SMB (EternalBlue) access via firewall. Use VPN if remote access required.
+
+  [8] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 1433 (MS SQL) accessible from 192.168.1.105
+       Recommendation : Restrict MS SQL access via firewall. Use VPN if remote access required.
+
+  [9] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 3306 (MySQL) accessible from 192.168.1.105
+       Recommendation : Restrict MySQL access via firewall. Use VPN if remote access required.
+
+  [10] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 3389 (RDP) accessible from 192.168.1.105
+       Recommendation : Restrict RDP access via firewall. Use VPN if remote access required.
+
+  [11] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 192.168.1.105
+       Detail         : Port 5900 (VNC) accessible from 192.168.1.105
+       Recommendation : Restrict VNC access via firewall. Use VPN if remote access required.
+
+  [12] RISKY SERVICE EXPOSED  —  Severity: MEDIUM
+       Source IP      : 198.51.100.5
+       Detail         : Port 3389 (RDP) accessible from 198.51.100.5
+       Recommendation : Restrict RDP access via firewall. Use VPN if remote access required.
+
+============================================================
+  END OF REPORT
+============================================================

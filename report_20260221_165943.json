@@ -1,0 +1,95 @@
+{
+  "generated": "2026-02-21 16:59:43",
+  "source": "Built-in Demo Traffic (simulated)",
+  "summary": {
+    "total_connections": 342,
+    "unique_ips": 11,
+    "anomaly_count": 12
+  },
+  "anomalies": [
+    {
+      "type": "PORT SCAN",
+      "severity": "HIGH",
+      "src_ip": "192.168.1.105",
+      "detail": "15 unique ports probed: [21, 22, 23, 25, 80, 110, 135, 139, 143, 443]...",
+      "recommendation": "Investigate source IP. Block at firewall if unauthorised. Review IDS rules."
+    },
+    {
+      "type": "BRUTE FORCE ATTEMPT",
+      "severity": "CRITICAL",
+      "src_ip": "10.0.0.88",
+      "detail": "25 failed connection attempts detected",
+      "recommendation": "Block IP immediately. Enable account lockout policy. Review auth logs."
+    },
+    {
+      "type": "HIGH FREQUENCY TRAFFIC",
+      "severity": "MEDIUM",
+      "src_ip": "172.16.0.99",
+      "detail": "120 total connections from this IP",
+      "recommendation": "Investigate for DoS/DDoS or misconfigured client. Consider rate limiting."
+    },
+    {
+      "type": "SUSPICIOUS PORT ACTIVITY",
+      "severity": "CRITICAL",
+      "src_ip": "203.0.113.99",
+      "detail": "Connection to port 4444 \u2014 known backdoor/C2 port",
+      "recommendation": "Isolate affected host immediately. Check for malware/RAT. Escalate to IR team."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 21 (FTP (unencrypted)) accessible from 192.168.1.105",
+      "recommendation": "Restrict FTP (unencrypted) access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 23 (Telnet (unencrypted)) accessible from 192.168.1.105",
+      "recommendation": "Restrict Telnet (unencrypted) access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 445 (SMB (EternalBlue)) accessible from 192.168.1.105",
+      "recommendation": "Restrict SMB (EternalBlue) access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 1433 (MS SQL) accessible from 192.168.1.105",
+      "recommendation": "Restrict MS SQL access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 3306 (MySQL) accessible from 192.168.1.105",
+      "recommendation": "Restrict MySQL access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 3389 (RDP) accessible from 192.168.1.105",
+      "recommendation": "Restrict RDP access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "192.168.1.105",
+      "detail": "Port 5900 (VNC) accessible from 192.168.1.105",
+      "recommendation": "Restrict VNC access via firewall. Use VPN if remote access required."
+    },
+    {
+      "type": "RISKY SERVICE EXPOSED",
+      "severity": "MEDIUM",
+      "src_ip": "198.51.100.5",
+      "detail": "Port 3389 (RDP) accessible from 198.51.100.5",
+      "recommendation": "Restrict RDP access via firewall. Use VPN if remote access required."
+    }
+  ]
+}

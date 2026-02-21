@@ -1,0 +1,15 @@
+# No external dependencies required.
+# Uses only Python standard library:
+# - csv        (parse CSV log files)
+# - json       (export JSON reports)
+# - collections (Counter, defaultdict for detection)
+# - datetime   (timestamps)
+# - sys, os    (file handling)
+
+# Python 3.8+ required
+
+# Usage:
+#   python analyser.py                          # Run with built-in demo data
+#   python analyser.py --demo                   # Same as above
+#   python analyser.py --file captures/sample_traffic.csv   # Use your own CSV log
+#   python analyser.py --file your_log.csv --output my_reports/
